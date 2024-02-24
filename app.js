@@ -9,10 +9,7 @@ form.addEventListener("click", function (e) {
       let id = this.id;
       if (this.value === "") {
         this.classList.add("empty");
-      } else {
-        this.classList.remove("empty");
-      }
-      if (this.id === "email" && emailReg.test(this.value) === false) {
+      } else if (this.id === "email" && emailReg.test(this.value) === false) {
         this.classList.add("empty");
         this.placeholder = "email@example.com";
       } else if ((id === "first-name") | (id === "last-name")) {
